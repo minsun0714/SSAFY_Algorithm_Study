@@ -1,4 +1,4 @@
-package _8월2째주;
+package _8월1째주;
 
 import java.io.BufferedReader;
 import java.io.IOException;
