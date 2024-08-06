@@ -1,4 +1,4 @@
-package _8월3째주;
+package _8월2째주;
 
 
 import java.util.Arrays;
