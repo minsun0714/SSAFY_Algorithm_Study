@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 //백트래킹 + bfs, 408ms
-public class 백준_14592_연구소_골드4_한재경 {
+public class 백준_14502_연구소_골드4_한재경 {
     public static int maxSafeArea = 0;
     public static int[] dx = {0, 0, -1, 1};
     public static int[] dy = {1, -1, 0, 0};

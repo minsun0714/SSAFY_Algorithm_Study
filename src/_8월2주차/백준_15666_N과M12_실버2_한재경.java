@@ -16,7 +16,7 @@ public class 백준_15666_N과M12_실버2_한재경 {
         Integer[] origin = new Integer[n]; //원본수열
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
-            origin[i] = Integer.parseInt(st.nextToken());
+            origin[i] = (Integer) Integer.parseInt(st.nextToken());
         }
 
         // 중복 없애기
