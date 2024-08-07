@@ -5,21 +5,40 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-//구현, 2152ms
+//구현, 364ms (2152ms에서 최적화)
 public class 백준_14889_스타트와링크_실버1_한재경 {
-    public static Stack<List<Integer>> teams = new Stack<>();
+    public static int minDiff = Integer.MAX_VALUE;
 
-    public static void backTracking(List<Integer> nowList, int nowNum, int lastNum, int full) { //현재팀, 현재넘버, 마지막수 full사이즈
-        if (nowList.size() == full) {
-            teams.push(new ArrayList<>(nowList)); // 리스트의 복사본을 추가해야 반영됨!
-            //nowList를 추가하면 nowList의 참조가 추가되므로, 나중에 nowList가 변경되면 같이 변경됨
+    public static void backTracking(List<Integer> nowTeam, int nowNum, int lastNum, int full, int[][] s) { //현재팀, 현재넘버, 마지막수 full사이즈
+        if (nowTeam.size() == full) {
+            List<Integer> anotherTeam = new ArrayList<>();
+            for (int i = 1; i <= lastNum; i++) {
+                if (!nowTeam.contains(i)) {
+                    anotherTeam.add(i);
+                }
+            }
+            int diff = calculateDiff(nowTeam, anotherTeam, s);
+            minDiff = Math.min(minDiff, diff);
             return;
         }
         for (int i = nowNum + 1; i <= lastNum; i++) {
-            nowList.add(i);
-            backTracking(nowList, i, lastNum, full); //백트래킹
-            nowList.remove(nowList.size() - 1);
+            nowTeam.add(i);
+            backTracking(nowTeam, i, lastNum, full, s); //백트래킹
+            nowTeam.removeLast();
         }
+    }
+
+    public static int calculateDiff(List<Integer> nowTeam, List<Integer> anotherTeam, int[][] s) {
+        int osum = 0, tsum = 0;
+        for (int i = 0; i < nowTeam.size(); i++) { //각 팀에서 두 명 고르기
+            for (int j = 0; j < nowTeam.size(); j++) {
+                if (i != j) {
+                    osum += s[nowTeam.get(i) - 1][nowTeam.get(j) - 1];
+                    tsum += s[anotherTeam.get(i) - 1][anotherTeam.get(j) - 1];
+                }
+            }
+        }
+        return Math.abs(osum - tsum);
     }
 
     public static void main(String[] args) throws IOException {
@@ -28,37 +47,15 @@ public class 백준_14889_스타트와링크_실버1_한재경 {
         int n = Integer.parseInt(br.readLine()); //전체인원
         int[][] s = new int[n][n]; //S[i,j]: i,j가 같은 팀에 속했을 때 더해지는 값
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) { //s배열 채우기
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0; j < n; j++) {
                 s[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        backTracking(new ArrayList<>(), 0, n, n / 2); // 전체 팀 경우의 수 나누기 - 백트래킹
-        
-        List<List<Integer>> anotherTeam = new ArrayList<>(); //두 팀 분리
-        int halfSize = teams.size() / 2;
-        for (int i = 0; i < halfSize; i++) {
-            anotherTeam.add(teams.pop());
-        }
+        backTracking(new ArrayList<>(), 0, n, n / 2, s); // 전체 팀 경우의 수 나누기 - 백트래킹
 
-        int minDiff = Integer.MAX_VALUE;
-        for (int x = 0; x < teams.size(); x++) { //각 팀의 경우
-            int oneSum = 0;
-            int twoSum = 0;
-            for (int i = 0; i < n; i++) { //s순회
-                for (int j = 0; j < n; j++) {
-                    if (teams.get(x).contains(i+1) && teams.get(x).contains(j+1)) {
-                        oneSum += s[i][j];
-                    }
-                    if (anotherTeam.get(x).contains(i+1) && anotherTeam.get(x).contains(j+1)){
-                        twoSum += s[i][j];
-                    }
-                }
-            }
-            minDiff = Math.min(minDiff, Math.abs(oneSum-twoSum));
-        }
         System.out.println(minDiff);
     }
 }
