@@ -1,12 +1,12 @@
-package _8월1째주;
+package _8월1주차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-// 시간 104ms, dp
-public class 백준_17070_파이프옮기기1_골드5_한재경_dp  {
+// dp, 104ms
+public class 백준_17070_파이프옮기기1_골드5_한재경 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());

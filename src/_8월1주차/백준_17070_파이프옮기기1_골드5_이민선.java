@@ -1,11 +1,12 @@
-package _8월1째주;
+package _8월1주차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 백준_17070_파이프옮기기1_골드5_이민선_dp {
+//dp
+public class 백준_17070_파이프옮기기1_골드5_이민선 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

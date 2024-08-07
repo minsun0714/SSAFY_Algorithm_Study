@@ -1,12 +1,12 @@
-package _8월2째주;
+package _8월2주차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-//2152ms
-public class 백준_14889_스타트와링크_실버1_한재경_백트래킹 {
+//구현, 2152ms
+public class 백준_14889_스타트와링크_실버1_한재경 {
     public static Stack<List<Integer>> teams = new Stack<>();
 
     public static void backTracking(List<Integer> nowList, int nowNum, int lastNum, int full) { //현재팀, 현재넘버, 마지막수 full사이즈

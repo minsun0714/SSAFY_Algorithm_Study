@@ -1,4 +1,4 @@
-package _8월2째주;
+package _8월1주차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-// 104ms
-public class 코드트리_나무타이쿤_골드5_이민선_구현 {
+// 구현, 104ms
+public class 코드트리_나무타이쿤_골드5_이민선 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

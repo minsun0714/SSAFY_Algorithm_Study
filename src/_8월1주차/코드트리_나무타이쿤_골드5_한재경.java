@@ -1,4 +1,4 @@
-package _8월1째주;
+package _8월1주차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 //구현, 156ms
-public class 코드트리_나무타이쿤_골드5_한재경_구현 {
+public class 코드트리_나무타이쿤_골드5_한재경 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int[] dx = {0, -1, -1, -1, 0, 1, 1, 1};

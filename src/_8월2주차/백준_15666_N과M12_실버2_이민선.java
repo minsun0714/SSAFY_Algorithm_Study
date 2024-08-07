@@ -1,12 +1,12 @@
-package _8월2째주;
+package _8월2주차;
 
 
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
-// 1156 ms
-public class 백준_15666_N과M12_실버2_이민선_백트래킹 {
+// 백트래킹, 1156 ms
+public class 백준_15666_N과M12_실버2_이민선 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

@@ -3,18 +3,16 @@ package week1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 import java.util.StringTokenizer;
 /**
+ * 구현
  * 119ms
  * 수정 이전: 영양제 좌표(toMove)를 2차원 배열에 넣어서 순회하면서 찾음.
  * 이차원 배열을 남발하지 말자
  */
-public class 코드트리_나무타이쿤_골드5_조준희_구현 {
+public class 코드트리_나무타이쿤_골드5_조준희 {
 	static int[] dx = {0, 1, 1, 0, -1, -1, -1, 0, 1};
 	static int[] dy = {0, 0, -1, -1, -1, 0, 1, 1, 1}; 
 	static Queue<Integer> toMove = new LinkedList<>();

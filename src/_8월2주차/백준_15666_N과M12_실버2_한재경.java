@@ -1,12 +1,12 @@
-package _8월2째주;
+package _8월2주차;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-//116ms
-public class 백준_15666_N과M12_실버2_한재경_백트래킹 {
+//백트래킹, 116ms
+public class 백준_15666_N과M12_실버2_한재경 {
     public static StringBuilder result = new StringBuilder();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
