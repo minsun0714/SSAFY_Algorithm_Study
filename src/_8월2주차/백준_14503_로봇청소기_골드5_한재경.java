@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 //구현, 104ms
 public class 백준_14503_로봇청소기_골드5_한재경 {
-    public static int[] dx = {-1, 0, 1, 0}; //북동남서 (반시계)
+    public static int[] dx = {-1, 0, 1, 0}; //북동남서 (시계)
     public static int[] dy = {0, 1, 0, -1};
 
     public static void main(String[] args) throws IOException {
@@ -38,7 +38,7 @@ public class 백준_14503_로봇청소기_골드5_한재경 {
             //주변에 청소안된칸 여부 확인
             boolean isDirty = false;
             for (int i = 0; i < 4; i++) {
-                int newD = (d + 3) % 4; //여기 왜 (d + i + 1) % 4는 안됨? - 52번라인 삭제랑 함께
+                int newD = (d + 3 + i) % 4; //현재 dx dy는 시계방향 기준, +3해서 반시계로
                 int nx = x + dx[newD];
                 int ny = y + dy[newD];
                 //청소 안 된 칸 있으면 전진
@@ -49,7 +49,8 @@ public class 백준_14503_로봇청소기_골드5_한재경 {
                     isDirty = true;
                     break;
                 }
-                d = newD; //요기도 지우고
+                d = newD; //d 새롭게 업댓해줘야 다음 newD업댓 제대로됨
+                //어차피 한바퀴 돌면 다시 방향 제자리라 추후영향x
             }
 
             if (!isDirty) { //청소안된칸 없으면
