@@ -6,7 +6,8 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 // 384ms
-public class 백준_14502_연구소_골드4_이민선_백트래킹 {
+// 백트래킹
+public class 백준_14502_연구소_골드4_이민선 {
     public static int answer = 0;
 
     public static void main(String[] args) throws IOException {
