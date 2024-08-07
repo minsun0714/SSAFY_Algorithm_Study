@@ -13,8 +13,8 @@ public class 백준_14889_스타트와링크_실버1_한재경 {
         if (nowTeam.size() == full) {
             List<Integer> anotherTeam = new ArrayList<>();
             for (int i = 1; i <= lastNum; i++) {
-                if (!nowTeam.contains(i)) {
-                    anotherTeam.add(i);
+                if (!nowTeam.contains(Integer.valueOf(i))) {
+                    anotherTeam.add(Integer.valueOf(i));
                 }
             }
             int diff = calculateDiff(nowTeam, anotherTeam, s);
@@ -22,9 +22,9 @@ public class 백준_14889_스타트와링크_실버1_한재경 {
             return;
         }
         for (int i = nowNum + 1; i <= lastNum; i++) {
-            nowTeam.add(i);
+            nowTeam.add(Integer.valueOf(i));
             backTracking(nowTeam, i, lastNum, full, s); //백트래킹
-            nowTeam.removeLast();
+            nowTeam.remove(nowTeam.size() - 1);
         }
     }
 
