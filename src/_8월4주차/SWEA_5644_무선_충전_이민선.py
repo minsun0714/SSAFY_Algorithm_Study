@@ -1,3 +1,5 @@
+# 217ms
+# 시뮬레이션
 T = int(input())
 
 for t in range(1, T + 1):
