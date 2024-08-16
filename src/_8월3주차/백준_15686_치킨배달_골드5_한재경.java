@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-//구현, 464ms
+//백트래킹, 464ms
 public class 백준_15686_치킨배달_골드5_한재경 {
     static int minCityDist = Integer.MAX_VALUE;
 
