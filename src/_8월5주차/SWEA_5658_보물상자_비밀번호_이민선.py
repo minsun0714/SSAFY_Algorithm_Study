@@ -1,3 +1,5 @@
+# 135ms
+# 구현
 from collections import deque
 
 T = int(input())
