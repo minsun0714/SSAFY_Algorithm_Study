@@ -1,5 +1,4 @@
-
-# 작업중
+from collections import deque
 import copy
 
 n, m, d = map(int, input().split())
@@ -11,19 +10,17 @@ def bfs(selected, r, copied_board):
     catch_count = [0] * 3
     catch = []
     for a in range(3):
-        stack = [(n - r, selected[a], 1)]
+        q = deque([(n - r, selected[a], 1)])
 
-        dx = [0, 0, -1]
-        dy = [-1, 1, 0]
+        dx = [0, -1, 0]
+        dy = [-1, 0, 1]
 
         visited = [[0] * m for _ in range(n - r)]
 
-        while stack:
-            x, y, depth = stack.pop()
+        while q:
+            x, y, depth = q.popleft()
 
             if depth > d:
-                continue
-            if catch_count[a]:
                 continue
 
             for i in range(3):
@@ -34,19 +31,24 @@ def bfs(selected, r, copied_board):
 
                 if visited[nx][ny]:
                     continue
+                
+                if catch_count[a]:
+                    continue
 
                 visited[nx][ny] = depth
 
                 if copied_board[nx][ny] == 0:
-                    stack.append((nx, ny, depth + 1))
+                    q.append((nx, ny, depth + 1))
                 else:
-                    copied_board[nx][ny] = 0
                     catch_count[a] = 1
                     catch.append((nx, ny))
                     break
+           
+    for x, y in catch:
+        copied_board[x][y] = 0
     copied_board.pop()
     copied_board.pop()
-    return sum(catch_count)
+    return len(set(catch))
 
 
 def back_tracking(selected, depth, start):
@@ -57,6 +59,7 @@ def back_tracking(selected, depth, start):
             copied_board.append([0] * m)
             catch_count = bfs(selected, r, copied_board)
             result += catch_count
+
         global answer
         answer = max(answer, result)
         return
