@@ -1,0 +1,40 @@
+from collections import defaultdict, deque
+
+n = int(input())
+population = list(map(int, input().split()))
+
+graph = defaultdict(list)
+for i in range(n):
+    adj_info = list(map(int, input().split()))
+    for j in range(adj_info.pop(0)):
+        graph[i + 1].append(adj_info[j])
+
+def is_linked(other_team):
+
+
+
+
+def dfs(node, depth):
+    visited[node] = 1
+
+    other_team = [i for i in (range(1, n + 1)) if not visited[i]]
+    if is_linked(other_team):
+        count1 = 0
+        count2 = 0
+        for i in range(1, n + 1):
+            if visited[i]:
+                count1 += population[i]
+            else:
+                count2 += population[i]
+        global answer
+        answer = min(answer, abs(count1 - count2))
+
+    for nxt in graph[node]:
+        if not visited[nxt]:
+            visited[nxt] = 1
+            dfs(nxt, depth + 1)
+            visited[nxt] = 0
+answer = 1e9
+visited = [0] * (n + 1)
+dfs(1, 0)
+print(answer if answer < 1e9 else -1)
