@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 //508ms 구현
 public class 백준_17406_배열돌리기4_골드4_조준희 {
     static Stack<Integer> cmdOrder = new Stack<>();
-    static int K= 3;
+    static int K;
     static int N;
     static int M;
     static int[][] board;
