@@ -49,6 +49,7 @@ def back_tracking(selected, depth):
         back_tracking(selected + [arr[i]], depth + 1)
         visited[i] = 0
 
+
 answer = 1e9
 visited = [0] * k
 back_tracking([], 0)
