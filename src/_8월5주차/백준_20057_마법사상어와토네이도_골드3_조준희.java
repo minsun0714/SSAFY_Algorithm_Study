@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//528ms 구현
 public class 백준_20057_마법사상어와토네이도_골드3_조준희 {
 	static int[][] board;
 	static int N;
