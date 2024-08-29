@@ -1,3 +1,5 @@
+# 64ms
+# DFS
 from collections import defaultdict
 
 n = int(input())
