@@ -1,73 +1,79 @@
-# n = int(input())
-#
-# board = [list(map(int, input().split())) for _ in range(n)]
-#
-# new_proportion = list(reversed(list(zip(*board))))
-#
-# print(new_proportion)
-
+# 2244ms
+# 구현, 시뮬레이션
 import math
+
 n = int(input())
 
 board = [list(map(int, input().split())) for _ in range(n)]
 
+proportion = [
+    (0, 0, 0.02, 0, 0),
+    (0, 0.1, 0.07, 0.01, 0),
+    (0.05, 1, 0, 0, 0),
+    (0, 0.1, 0.07, 0.01, 0),
+    (0, 0, 0.02, 0, 0)
+]
+
+def rotate():
+    global proportion
+    proportion = list(reversed(list(zip(*proportion))))
+
 dr = [0, 1, 0, -1]
 dc = [-1, 0, 1, 0]
 
+start_sub = [(2, 3),(1, 2), (2, 1), (3, 2)]
 
-def put_sand(r, c, p, y):
+def blow(xr, xc, yr, yc, d):
     global answer
-    if n > r >= 0 and n > c >= 0:
-        board[r][c] += math.floor(p * y)
+    sr, sc = xr - start_sub[d][0], xc - start_sub[d][1]
+    ar, ac = 0, 0
+    y = board[yr][yc]
+
+    sand_in = 0
+    sand_out = 0
+    # i, j는 board의 인덱스
+    # i - sr, j - sc는 proportion의 인덱스
+    for i in range(sr, sr + 5):
+        for j in range(sc, sc + 5):
+            p = proportion[i - sr][j - sc]
+            sand_amount = math.floor(p * y)
+            if p < 1 and (i < 0 or j < 0 or i >= n or j >= n):
+                sand_out += sand_amount
+                continue
+            if p == 1:
+                ar, ac = i, j
+
+            else:
+                sand_in += sand_amount
+                board[i][j] += sand_amount
+    if n > ar >= 0 and n > ac >= 0:
+        board[ar][ac] += y - (sand_in + sand_out)
+    # ar, ac가 범위 밖일 때 sand_out에 추가해야 함 (디버깅 가장 오래 걸린 부분)
     else:
-        answer += math.floor(p * y)
-    return math.floor(p * y)
+        sand_out += y - (sand_in + sand_out)
+    board[yr][yc] = 0
 
+    answer += sand_out
 
-def blow(xr, xc):
-    d = 0
-    count = 1
-    while xr >= 0 and xc >= 0:
-        for i in range(2):
-            for j in range(count):
-                yr, yc = xr + dr[d % 4], xc + dc[d % 4]
-                ar, ac = yr + dr[d % 4], yc + dc[d % 4]
+def tornado(xr, xc):
+    dir = 0
+    c = 1
 
-                if yr == 0 and yc == 0:
+    while xc > -1:
+        for _ in range(2):
+            for _ in range(c):
+                yr, yc = xr + dr[dir % 4], xc + dc[dir % 4]
+
+                if xc == -1:
                     return
-                y = board[yr][yc]
 
-                move = 0
+                blow(xr, xc, yr, yc, dir % 4)
 
-                one_r_right, one_c_right = xr + dr[(d - 1) % 4], xc + dc[(d - 1) % 4]
-                one_r_left, one_c_left = xr + dr[(d + 1) % 4], xc + dc[(d + 1) % 4]
-                move += put_sand(one_r_right, one_c_right, 0.01, y)
-                move += put_sand(one_r_left, one_c_left, 0.01, y)
-                seven_r_right, seven_c_right = yr + dr[(d - 1) % 4], yc + dc[(d - 1) % 4]
-                seven_r_left, seven_c_left = yr + dr[(d + 1) % 4], yc + dc[(d + 1) % 4]
-                move += put_sand(seven_r_right, seven_c_right, 0.07, y)
-                move += put_sand(seven_r_left, seven_c_left, 0.07, y)
-                two_r_right, two_c_right = yr + dr[(d - 1) % 4] * 2, yc + dc[(d - 1) % 4]
-                two_r_left, two_c_left = yr + dr[(d + 1) % 4] * 2, yc + dc[(d + 1) % 4]
-                move += put_sand(two_r_right, two_c_right, 0.02, y)
-                move += put_sand(two_r_left, two_c_left, 0.02, y)
-                ten_r_right, ten_c_right = ar + dr[(d - 1) % 4], ac + dc[(d - 1) % 4]
-                ten_r_left, ten_c_left = ar + dr[(d + 1) % 4], ac + dc[(d + 1) % 4]
-                move += put_sand(ten_r_right, ten_c_right, 0.1, y)
-                move += put_sand(ten_r_left, ten_c_left, 0.1, y)
-                five_r, five_c = ar + dr[d % 4], ac + dc[d % 4]
-                move += put_sand(five_r, five_c, 0.05, y)
-
-                put_sand(ar, ac, 1, y - move)
-
-                board[yr][yc] = 0
                 xr, xc = yr, yc
-
-            d += 1
-        count += 1
-
+            dir += 1
+            rotate()
+        c += 1
 
 answer = 0
-mid = n // 2
-blow(mid, mid)
+tornado(n // 2, n // 2)
 print(answer)
