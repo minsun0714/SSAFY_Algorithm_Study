@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
-
+//560ms
 public class 백준_16234_인구이동_골드4_정석진 {
     public static class Node {
         int r;
