@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 //952ms, 구현
-public class 백준_20055_컨베이어벨트위의로봇_한재경 {
+public class 백준_20055_컨베이어벨트위의로봇_골드5_한재경 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
