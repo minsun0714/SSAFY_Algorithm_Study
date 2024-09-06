@@ -79,7 +79,5 @@ while t:
     # 아래쪽 부분 시계 방향 순환
     rotate_clockwise()
 
-sum_val = 2
-for row in board:
-    sum_val += sum(row)
-print(sum_val)
+# 공기청정기 -1을 두번 뻄을 고려하여 다시 2를 더해줌
+print(sum([sum(row) for row in board]) + 2)
