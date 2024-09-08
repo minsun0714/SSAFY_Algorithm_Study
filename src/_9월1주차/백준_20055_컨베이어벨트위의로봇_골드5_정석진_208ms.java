@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 //208ms
-public class 백준_20055_컨베이어벨트위의로봇_정석진 {
+public class 백준_20055_컨베이어벨트위의로봇_골드5_정석진_208ms {
 	public static class Node {
 		int HP;
 		Node forth;
