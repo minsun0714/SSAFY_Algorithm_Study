@@ -13,7 +13,10 @@ public class 백준_16234_인구이동_골드4_조준희 {
 	static int[] dx = {0, -1, 0, 1};
 	static int[][] map;
 	static int[][] unionMap;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 0a45c01ab3c502c8b03627b67707f3223b7b1e8f
 	static int N;
 	static int L;
 	static int R;

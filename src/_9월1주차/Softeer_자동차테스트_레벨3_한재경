@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+//646ms, 경우의 수
+public class Softeer_자동차테스트_레벨3_한재경 {
+    public static void main(String[] args) throws IOException {
+        //n개중 3개
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int n = Integer.parseInt(st.nextToken()); //n개 중 3개 뽑음
+        int q = Integer.parseInt(st.nextToken()); //q개 쿼리
+        List<Integer> cars = new ArrayList<>(); //n개 자동차 연비
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < n; i++) {
+            cars.add(Integer.parseInt(st.nextToken()));
+        }
+
+        //3개 자동차 골랐을 때 중앙값 m 나오는 경우의 수 출력
+        //정렬해서 m보다 높은수 * 작은수
+        Collections.sort(cars);
+
+        //각 수의 중앙값 경우의 수 미리 세팅
+        Map<Integer, Integer> carsCases = new HashMap<>(); //해당 key넘버의 차에 대한 경우의 수
+        for (int i = 0; i < n; i++) {
+            int lsize = i; //왼쪽 개수
+            int rsize = n - i - 1; //오른쪽 개수
+            carsCases.put(cars.get(i), lsize * rsize);
+        }
+
+        for (int t = 0; t < q; t++) { //q개 쿼리 진행
+            int m = Integer.parseInt(br.readLine()); //중앙값
+            sb.append(carsCases.getOrDefault(m, 0) + "\n");
+        }
+        System.out.println(sb);
+    }
+}
