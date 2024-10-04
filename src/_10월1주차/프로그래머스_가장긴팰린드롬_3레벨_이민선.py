@@ -1,3 +1,5 @@
+# 구현
+
 def solution(s):
     answer = 0
     for i in range(len(s)):
@@ -6,3 +8,4 @@ def solution(s):
                 answer = max(answer, j - i + 1)
 
     return answer
+
