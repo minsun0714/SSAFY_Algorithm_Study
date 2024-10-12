@@ -38,8 +38,6 @@ def simulation(depth, selected, visited):
             continue
         if board[i] == '.':
             continue
-        if selected and board[i] == selected[-1]:
-            continue
         if depth % 2 == 0 and board[i] == 'O' or depth % 2 == 1 and board[i] == 'X':
             continue
         if visited[i // 3][i % 3] == '.':
