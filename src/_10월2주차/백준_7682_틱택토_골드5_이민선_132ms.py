@@ -1,3 +1,4 @@
+# 구현
 def has_bingo(board):
     dp = [[[0] * 2 for _ in range(3)] for _ in range(3)]
 
@@ -23,13 +24,13 @@ def has_bingo(board):
 
 def simulation(depth, selected, visited):
     global answer
-    if has_bingo(visited[0] + visited[1] + visited[2]):
-        if len(selected) == len(O_list) + len(X_list):
+    if has_bingo(visited):
+        if len(selected) == O + X:
             answer = 'valid'
         return
 
     if depth == 9:
-        if not has_bingo(visited[0] + visited[1] + visited[2]):
+        if not has_bingo(visited):
             answer = 'valid'
         return
 
@@ -40,10 +41,10 @@ def simulation(depth, selected, visited):
             continue
         if depth % 2 == 0 and board[i] == 'O' or depth % 2 == 1 and board[i] == 'X':
             continue
-        if visited[i // 3][i % 3] == '.':
-            visited[i // 3][i % 3] = board[i]
+        if visited[i] == '.':
+            visited[i] = board[i]
             simulation(depth + 1, selected + [board[i]], visited)
-            visited[i // 3][i % 3] = '.'
+            visited[i] = '.'
 
 while True:
     input_ = input()
@@ -51,27 +52,27 @@ while True:
         break
     board = list(map(str, input_))
 
-    O_list = []
-    X_list = []
+    O = 0
+    X = 0
 
     for i in range(9):
         row_idx = i // 3
         col_idx = i % 3
 
         if board[i] == 'O':
-            O_list.append((row_idx, col_idx))
+            O += 1
         elif board[i] == 'X':
-            X_list.append((row_idx, col_idx))
+            X += 1
 
-    if abs(len(O_list) - len(X_list)) > 1:
+    if abs(O - X) > 1:
         print('invalid')
         continue
 
-    if len(O_list) > len(X_list):
+    if O > X:
         print('invalid')
         continue
 
     answer = 'invalid'
-    simulation(0, [],[['.'] * 3 for _ in range(3)])
+    simulation(0, [],['.'] * 9)
     print(answer)
 
