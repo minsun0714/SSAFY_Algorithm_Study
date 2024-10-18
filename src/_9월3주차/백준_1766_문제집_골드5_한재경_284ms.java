@@ -1,6 +1,7 @@
 import java.util.*;
 
 //bfs
+//i-1 후 *2가 최단일 수 있으므로 dp 불가! : 모든 *2경로 다 메모하고 시작하려면 시간 이중 for문 되어야 함
 public class Main {
 
     static int min = Integer.MAX_VALUE;
