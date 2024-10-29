@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class 프로그래머스_게임맵최단거리_레벨2_정석진 {
+public class 프로그래머스_게임맵최단거리_레벨3_정석진 {
 
 	class Solution {
 		public static int N;
