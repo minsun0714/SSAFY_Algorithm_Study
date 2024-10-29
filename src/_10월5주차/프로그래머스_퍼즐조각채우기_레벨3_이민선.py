@@ -1,3 +1,4 @@
+# dfs, 시뮬레이션
 def solution(game_board, table):
     def dfs(board, x, y, pieces, target):
         if x < 0 or x >= len(board) or y < 0 or y >= len(board[0]):
