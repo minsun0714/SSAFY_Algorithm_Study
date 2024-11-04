@@ -1,4 +1,5 @@
 import java.util.*;
+//정렬
 class 프로그래머스_K번째수_레벨1_한재경 {
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = new int[commands.length];
