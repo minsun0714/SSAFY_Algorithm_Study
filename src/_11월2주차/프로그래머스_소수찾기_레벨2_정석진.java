@@ -27,21 +27,21 @@ class Solution {
         int answer = 0;
         int len = numbers.length();
         int[] primes = sieve();
-
         HashSet<Integer> set = new HashSet<>();
         Queue<Element> q = new LinkedList<>();
         char[] num = numbers.toCharArray();
-
+        
         for(int i=0;i<len;i++){
             int digit = num[i] - '0';
             int visited = 1 << i;  
             q.add(new Element(digit, visited));
-            set.add(digit);
         }
-
+        
         while(!q.isEmpty()){
             Element e = q.poll();
-            set.add(e.num);
+            if (primes[e.num] == 1) {
+                set.add(e.num);
+            }
             for(int i =0;i<len;i++){
                 if((e.visited&(1<<i))==0){
                     int newNum = e.num*10+(num[i]-'0');
@@ -50,12 +50,6 @@ class Solution {
                 }
             }
         }
-
-        for (int i : set) {
-            if (primes[i] == 1) {
-                answer++;
-            }
-        }
-        return answer;
+        return set.size();
     }
 }
