@@ -1,4 +1,4 @@
-
+# union find
 n = int(input())
 
 def find(x):

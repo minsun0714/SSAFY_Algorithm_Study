@@ -1,3 +1,5 @@
+# union find
+
 n = int(input())
 m = int(input())
 

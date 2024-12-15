@@ -1,3 +1,4 @@
+# MST
 n = int(input())
 
 stars = []
