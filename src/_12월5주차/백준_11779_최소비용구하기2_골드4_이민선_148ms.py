@@ -32,4 +32,4 @@ def dijkstra(x, y):
 
             heapq.heappush(hq, (color + 1 - board[nx][ny], nx, ny))
 
-dijkstra(0, 0)
+dijkstra(0, 0 )
