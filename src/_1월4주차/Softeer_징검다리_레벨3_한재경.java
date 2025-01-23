@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //가장 긴 증가하는 부분수열, dp, 125ms
-public class Softeer_징검다리_레벨3_한재경 {
+public class Softeer_징검다리_레벨3_한재경_125ms {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
