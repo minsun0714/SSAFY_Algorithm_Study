@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //bfs, 548ms
-public class Softeer_이미지프로세싱_레벨3_한재경 {
+public class Softeer_이미지프로세싱_레벨3_한재경_548ms {
     static int[] dx = new int[] {0, 0, -1, 1};
     static int[] dy = new int[] {-1, 1, 0, 0};
     static int[][] grid;
