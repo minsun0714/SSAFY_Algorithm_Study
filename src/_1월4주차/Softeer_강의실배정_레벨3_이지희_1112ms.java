@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+// 우선순위큐, 그리디
 public class Softeer_강의실배정_레벨3_이지희_1112ms {
 
     public static void main(String[] args) throws IOException {
