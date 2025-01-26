@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Softeer__징검다리_레벨3_이지희_99ms {
+// 최장 증가 수열, 이분 탐색
+public class Softeer_징검다리_레벨3_이지희_99ms {
 
     // left, right, mid : index
     static int search(List<Integer> list, int no) {
