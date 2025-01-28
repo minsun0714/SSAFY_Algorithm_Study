@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 백준_12015_가장긴증가하는부분수열_골드2_이민선_436ms {
+public class 백준_12015_가장긴증가하는부분수열2_골드2_이민선_436ms {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
