@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class 백준_17142_연구소3_이민선_192ms {
+public class 백준_17142_연구소3_골드3_이민선_192ms {
     static int n;
     static int m;
     static int[][] board;
