@@ -47,8 +47,10 @@ public class 백준_1477_휴게소세우기_골드4_이민선_64ms {
                 prev = cur;
             }
 
+            // m개보다 더 많이 지었다는 뜻은 mid가 최댓값이 아니라는 뜻 -> 답이 될 수 없음
             if (count > m){
                 s = mid + 1;
+                // m개보다 더 적게 지었거나 m개와 같다는 뜻은 mid가 최댓값일 수도 있다는 뜻 -> 답이 될 수도 있음.
             } else {
                 e = mid - 1;
                 answer = mid;
