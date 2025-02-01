@@ -45,7 +45,7 @@ public class 프로그래머스_징검다리건너기_레벨3_김동빈 {
         	if (maxStoneCount < minStoneCountKInARow) {
         		minStoneCountKInARow = maxStoneCount;
         	}
-        }
+        }2
         
         int answer = minStoneCountKInARow;
         return answer;
