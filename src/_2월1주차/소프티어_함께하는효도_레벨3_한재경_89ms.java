@@ -3,7 +3,7 @@ import java.util.*;
 
 //dfs
 //1명 dfs 끝난 내부에서 2번 dfs -
-public class 소프티어_함께하는효도_레벨3_한재경_89ms {
+public class Softeer_함께하는효도_레벨3_한재경_89ms {
     static int[] dx = new int[]{0, 0, -1, 1};
     static int[] dy = new int[]{-1, 1, 0, 0};
     static int[][] visited, grid, mans;
