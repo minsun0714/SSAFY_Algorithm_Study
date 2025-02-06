@@ -5,7 +5,7 @@ package _2월1주차;
 import java.io.*;
 import java.util.*;
 
-public class 소프티어_함께하는효도_레벨3_이민선_99ms {
+public class Softeer_함께하는효도_레벨3_이민선_99ms {
     static int n, m;
     static int[][] board;
     static int[] dx = {-1, 1, 0, 0};
