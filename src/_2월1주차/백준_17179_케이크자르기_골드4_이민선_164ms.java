@@ -55,6 +55,8 @@ public class 백준_17179_케이크자르기_골드4_이민선_164ms {
             // 마지막 원소를 못 센 경우
             // count < target일 때 조각 개수가 target과 같아질 가능성이 있음.
             // count == target일 때 조각 개수가 target보다 많아짐. 그럼 answer를 갱신해줘야 하지 않나?
+
+            // 문제가 이상한 듯 https://www.acmicpc.net/board/view/120625
             if (count <= target){
                 e = mid - 1;
             } else {
