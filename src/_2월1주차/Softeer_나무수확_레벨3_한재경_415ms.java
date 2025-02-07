@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //dp (dfs로 할 필요X - 방문한 장소 재방문x, [i-1], [j-1]지점과 비교해서 dp 써내려나가면 됨)
-public class 소프티어_나무수확_레벨3_한재경_415ms {
+public class Softeer_나무수확_레벨3_한재경_415ms {
     static int[] dx = new int[]{0, 1}; //우 하
     static int[] dy = new int[]{1, 0};
     static int n;
