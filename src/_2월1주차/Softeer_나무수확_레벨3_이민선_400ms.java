@@ -3,7 +3,7 @@ package _2월1주차;
 import java.io.*;
 import java.util.*;
 
-public class 소프티어_나무수확_레벨3_이민선_400ms {
+public class Softeer_나무수확_레벨3_이민선_400ms {
     static int n;
     static int[][] board;
     static int[][][] dp;
