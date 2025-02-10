@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 // LIS, DP (O(n^2) 가능, 각 인덱스별 LIS 구해야 하므로 DP가 더 적합)
-public class 백준_11054_가장긴바이토닉부분수열_한재경_136ms {
+public class 백준_11054_가장긴바이토닉부분수열_골드4_한재경_136ms {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
