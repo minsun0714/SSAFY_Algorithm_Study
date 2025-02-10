@@ -1,5 +1,5 @@
 //dp
-class 프로그래머스_보행자천국_한재경 {
+class 프로그래머스_보행자천국_레벨3_한재경 {
     int MOD = 20170805;
   
     public int solution(int m, int n, int[][] cityMap) {
