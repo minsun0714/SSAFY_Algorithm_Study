@@ -1,5 +1,9 @@
+package _2월2주차;
+
+import java.util.*;
+
 //구현
-class LeetCode_57_InsertInterval_Medium_한재경 {
+public class LeetCode_57_InsertInterval_Medium_한재경 {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> arr = new ArrayList<>();
         int n = intervals.length;
