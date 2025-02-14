@@ -1,4 +1,4 @@
-package org.example;
+package _2월2주차;
 
 import java.io.*;
 import java.util.*;
