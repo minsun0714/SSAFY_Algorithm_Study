@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //벨만포드, 264ms, 최솟값 갱신 시 음수 int 범위 초과할 수 있으므로 dist[] long!
-class 백준_11657_타임머신_실버4_한재경_264ms {
+class 백준_11657_타임머신_골드4_한재경_264ms {
     int start;
     int end;
     int cost;
