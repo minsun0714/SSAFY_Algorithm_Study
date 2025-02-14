@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class 백준_11657_타임머신_골드4_이민선_ms {
+public class 백준_11657_타임머신_골드4_이민선_224ms {
     static int n, m;
     static int[][] edges;
     static long[] dist;
