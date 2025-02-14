@@ -1,3 +1,5 @@
+package _2월2주차;
+
 class 프로그래머스_자물쇠와열쇠_레벨2_한재경 {
     static int n, m, hole;
     
