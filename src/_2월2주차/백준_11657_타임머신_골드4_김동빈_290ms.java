@@ -8,7 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-public class 백준_타임머신 {
+// 벨만포드, 290ms
+public class 백준_11657_타임머신_골드4_김동빈_290ms {
 	
 	static class Bus {
 		
