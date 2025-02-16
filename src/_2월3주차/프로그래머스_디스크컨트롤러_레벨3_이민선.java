@@ -1,4 +1,4 @@
-package _3월3주차;
+package _2월3주차;
 
 import java.util.*;
 
