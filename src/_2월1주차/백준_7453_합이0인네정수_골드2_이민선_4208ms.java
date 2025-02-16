@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class 백준_7453_합이0인네정수_골드2_이민선_ms {
+public class 백준_7453_합이0인네정수_골드2_이민선_4208ms {
     static int n;
     static int[] A;
     static int[] B;
