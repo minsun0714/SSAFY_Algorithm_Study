@@ -1,10 +1,7 @@
 package _2월3주차;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 public class 백준_3020_개똥벌레_골드5_이민선_424ms {
   static int n, h;
