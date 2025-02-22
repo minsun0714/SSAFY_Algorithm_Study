@@ -1,5 +1,6 @@
+package _2월3주차;
+
 import java.util.*;
-import java.io.*;
 
 class Crew implements Comparable<Crew> {
     int hour;
