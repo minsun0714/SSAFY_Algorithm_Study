@@ -7,7 +7,7 @@ public class Softeer_사물인식최소면적산출프로그램_레벨3_한재�
     static int ans;
     static List<List<int[]>> c;
     //k개 중에 1개씩 고르기
-    public static void combinations(int depth, int u, int d, int l, int r) { //i번째 색깔 idx 고르기
+    public static void combinations(int depth, int u, int d, int l, int r) {
         if ((u-d)*(r-l) >= ans) {return;}
         if (depth == k) { //다고름
             ans = Math.min(ans, (u-d)*(r-l));
