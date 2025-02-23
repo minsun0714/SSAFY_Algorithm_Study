@@ -1,5 +1,6 @@
 import java.util.*;
 
+//우선순위큐, 정렬
 class Job implements Comparable<Job> { 
     // 전체 작업 큐: 요청시간, 소요시간, 작업번호 순 정렬
     int req;   // 요청시간
