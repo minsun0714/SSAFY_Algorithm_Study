@@ -1,7 +1,7 @@
 import java.util.*;
 
 //dp
-class 프로그래머스_완전범죄_레벨3_한재경 {
+class 프로그래머스_완전범죄_레벨2_한재경 {
     public int solution(int[][] info, int n, int m) {
         int answer = 0;
         int l = info.length;
