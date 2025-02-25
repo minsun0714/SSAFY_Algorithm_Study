@@ -13,7 +13,7 @@ class Node implements Comparable<Node> {
         return o.score - this.score;
     }
 }
-public class Softeer_성적평_레벨3_한재경_1695ms {
+public class Softeer_성적평가_레벨3_한재경_1695ms {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
