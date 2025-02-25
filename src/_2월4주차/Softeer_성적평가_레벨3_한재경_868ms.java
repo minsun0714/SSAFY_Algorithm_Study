@@ -13,7 +13,7 @@ class Node implements Comparable<Node> {
         return o.score - this.score;
     }
 }
-public class Softeer_성적평가_레벨3_한재경_1695ms {
+public class Softeer_성적평가_레벨3_한재경_868ms {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -58,12 +58,13 @@ public class Softeer_성적평가_레벨3_한재경_1695ms {
             }
             pre = node.score;
         }
-        
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(ans[i][j] + 1 +" ");
+                sb.append(ans[i][j] + 1 +" ");
             }
-            System.out.println();
+            sb.append("\n");
         }
+        System.out.println(sb);
     }
 }
