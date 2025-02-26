@@ -1,3 +1,5 @@
+package _2월4주차;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
