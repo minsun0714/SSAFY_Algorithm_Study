@@ -1,6 +1,6 @@
 import java.util.*;
 
-class 프로그래머스_레벨3_코딩테스트공부_한재경 {
+class 프로그래머스_코딩테스트공부_레벨3_한재경 {
     public int solution(int alp, int cop, int[][] problems) {
         int maxAlp = 0;
         int maxCop = 0;
