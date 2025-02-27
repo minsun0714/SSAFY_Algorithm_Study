@@ -1,6 +1,6 @@
 import java.util.*;
 
-class 프로그래머스_레벨3_등산코스_한재경 {
+class 프로그래머스_등산코스_레벨3_한재경 {
     static List<List<int[]>> graph;
     static Set<Integer> summitsSet, gatesSet;
 
