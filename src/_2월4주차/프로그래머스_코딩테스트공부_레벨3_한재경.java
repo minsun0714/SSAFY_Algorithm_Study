@@ -1,5 +1,6 @@
 import java.util.*;
 
+// dp
 class 프로그래머스_코딩테스트공부_레벨3_한재경 {
     public int solution(int alp, int cop, int[][] problems) {
         int maxAlp = 0;
