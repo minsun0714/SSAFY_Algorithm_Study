@@ -1,5 +1,6 @@
 import java.util.*;
 
+// 큐, 구현
 class 프로그래머스_두큐합같게만들기_레벨3_한재경 {
     public int solution(int[] queue1, int[] queue2) {
         int answer = -2;
