@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 //dp
-public class 백준_로봇조종하기_레벨2_한재경_609ms {
+public class 백준_2169_로봇조종하기_레벨2_한재경_609ms {
     static int[] dx = new int[]{0, 0, 1, -1};
     static int[] dy = new int[]{1, -1, 0, 0};
     public static void main(String[] args) throws IOException{
