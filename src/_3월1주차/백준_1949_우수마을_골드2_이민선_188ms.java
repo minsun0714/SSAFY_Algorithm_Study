@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class 백준_1949_우수마을_골드2_이민선_ms {
+public class 백준_1949_우수마을_골드2_이민선_188ms {
     static int n;
     static int[] vals;
     static List<List<Integer>> tree = new ArrayList<>();
