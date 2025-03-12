@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// 트라이
 public class 백준_5052_전화번호목록_골드4_이민선_344ms {
     static int t;
     static Node root;
