@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
+// 트라이
 public class 백준_16934_게임닉네임_골드3_이민선_364ms {
     static int n;
     static class Node {
