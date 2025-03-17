@@ -3,6 +3,7 @@ package _3월3주차;
 import java.io.*;
 import java.util.*;
 
+// mst
 public class 백준_1647_도시분할계획_이민선_골드4_1664ms {
     static int n, m;
     static List<int[]> graph = new ArrayList<>();

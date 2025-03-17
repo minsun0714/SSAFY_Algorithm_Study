@@ -8,6 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
+// mst
 public class 백준_1197_최소스패닝트리_골드4_이민선_596ms {
     static int v, e;
     static List<int[]> graph = new ArrayList<>();
