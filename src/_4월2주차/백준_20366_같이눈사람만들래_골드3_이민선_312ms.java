@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class 백준_20366_같이눈사람만들래_골드3_이민선_840ms {
+public class 백준_20366_같이눈사람만들래_골드3_이민선_312ms {
     static int n;
     static int[] nums;
     static int answer = Integer.MAX_VALUE;
@@ -24,42 +24,31 @@ public class 백준_20366_같이눈사람만들래_골드3_이민선_840ms {
 
         Arrays.sort(nums);
 
-        for (int i=n - 1;i>=3;i--){
-            for (int j=i;j>=2;j--){
-                if (i == j) continue;
-                slidingWindow(j, i);
+        for (int i=0;i<=n - 4;i++){
+            for (int j=n - 1;j >= i + 3;j--){
+                slidingWindow(i, j);
             }
         }
         System.out.println(answer);
     }
 
     private static void slidingWindow(int i, int j) {
-        int s = 0;
-        int e = 1;
+        int s = i + 1;
+        int e = j - 1;
 
-        while (s < i && e < j){
-            if (s == e) {
-                e++;
-                continue;
-            }
-            if (s == j){
-                s++;
-                continue;
-            }
-            if (e == i){
-                e++;
-                continue;
-            }
-            int a = nums[s] + nums[j];
-            int b = nums[e] + nums[i];
+        while (s < e){
+            int a = nums[i] + nums[j];
+            int b = nums[s] + nums[e];
 
-            answer = Math.min(answer, (Math.abs(a - b)));
-            if (a > b) e++;
-            else if (a < b) s++;
+
+            if (a > b) s++;
+            else if (a < b) e--;
             else {
                 answer = 0;
                 return;
             }
+            answer = Math.min(answer, Math.abs(a - b));
         }
     }
 }
+
