@@ -8,6 +8,8 @@ import java.util.PriorityQueue;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+// 오래전에 푼거라 코드 질이 떨어질 수 있습니다.
+
 // [클래스] 메인
 public class 백준_최소비용구하기2_김민섭_388ms {
 	
