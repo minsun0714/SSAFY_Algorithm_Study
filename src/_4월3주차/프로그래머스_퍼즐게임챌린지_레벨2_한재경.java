@@ -1,3 +1,4 @@
+// 이진탐색
 class 프로그래머스_퍼즐게임챌린지_레벨2_한재경 {
     static int maxDiff; //최대난이도
     static int n;
