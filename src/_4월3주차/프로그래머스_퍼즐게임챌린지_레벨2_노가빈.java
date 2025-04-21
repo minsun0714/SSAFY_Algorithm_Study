@@ -23,7 +23,7 @@
 테스트 21 〉	통과 (22.94ms, 122MB)
  */
 
-class Solution {
+class 프로그래머스_퍼즐게임챌린지_레벨2_노가빈 {
     //level을 이분탐색으로 찾을 것
     public int solution(int[] diffs, int[] times, long limit) {
         int answer = 0;
