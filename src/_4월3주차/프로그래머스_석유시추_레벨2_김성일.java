@@ -1,4 +1,3 @@
-package study.self;
 // BFS + IMOS
 /*
 정확성  테스트
