@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //재귀
-public class 백준_1030_프렉탈평면_조준희_112ms {
+public class 백준_1030_프렉탈평면_골드3_조준희_112ms {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
