@@ -12,7 +12,7 @@ class Node {
 }
 
 // dfs
-public class 백준_1167_트리의지름(dfs)_한재경_748ms {
+public class 백준_1167_트리의지름(dfs)_골드2_한재경_748ms {
     static int v;
     static List<Node>[] nodes;
 
