@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main_23326_홍익투어리스트_G3_김민섭_652ms {
+public class Main_23326_홍익투어리스트_골드3_김민섭_652ms {
 	
 	// [SEGMENT TREE]
 	private static class SegmentTree {
