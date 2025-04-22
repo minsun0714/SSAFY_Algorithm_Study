@@ -1,5 +1,6 @@
 package _4월4주차;
 
+// dfs
 class 프로그래머스_수레움직이기_레벨3_이민선 {
     static int n, m;
     static int rx, ry;
