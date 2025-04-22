@@ -3,7 +3,7 @@ package _2월2주차;
 import java.util.*;
 
 //구현
-public class LeetCode_57_InsertIntervalMedium_한재경 {
+public class LeetCode_57_InsertIntervalMedium_한재경_1ms {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> arr = new ArrayList<>();
         int n = intervals.length;
