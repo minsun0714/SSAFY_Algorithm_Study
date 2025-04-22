@@ -1,6 +1,6 @@
 package _4월4주차;
 
-class 프로그래머스_수레움직이기_레벨3 {
+class 프로그래머스_수레움직이기_레벨3_이민선 {
     static int n, m;
     static int rx, ry;
     static int bx, by;
