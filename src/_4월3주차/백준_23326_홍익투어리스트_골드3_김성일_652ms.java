@@ -10,7 +10,7 @@ class Main {
     static int Q;
     static int nowIndex; 
     static TreeSet<Integer> hotPlace = new TreeSet<>();
-    public static void main(String[] args) throws Exception {
+    public static void 백준_23326_홍익투어리스트_골드3_김성일_652ms (String[] args) throws Exception {
         tokens = new StringTokenizer(input.readLine());
         N = Integer.parseInt(tokens.nextToken());
         Q = Integer.parseInt(tokens.nextToken());
