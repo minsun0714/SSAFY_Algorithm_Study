@@ -12,7 +12,7 @@ class getFar {
     }
 }
 
-public class 백준_1167_트리의지름_한재경_765ms {
+public class 백준_1167_트리의지름_한재경_756ms {
     static int v;
     static List<Node>[] nodes;
 
