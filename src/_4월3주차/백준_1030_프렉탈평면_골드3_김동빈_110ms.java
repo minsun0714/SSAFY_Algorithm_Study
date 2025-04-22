@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 // 재귀
-public class Main_백준_1030_프렉탈평면 {
+public class 백준_1030_프렉탈평면_골드3_김동빈_110ms {
 	private static int[][] initBoard;
 
 	public static void main(String[] args) throws Exception {
