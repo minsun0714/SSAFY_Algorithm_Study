@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main_1030_프렉탈평면_G3_김민섭_104ms {
+public class Main_1030_프렉탈평면_골드3_김민섭_104ms {
 	
 	// [GET COLOR AT]
 	private static int getColorAt(int row, int col, int n, int k, int width) {
