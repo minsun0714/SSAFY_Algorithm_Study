@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 // bfs (입력받을 때 while (st.countTokens() > 1)로 하면 시간초과 남)
-class 백준_1167_트리의지름_한재경_765ms {
+class getFar {
     int to; //도착 노드
     int cost; //비용
 
@@ -12,7 +12,7 @@ class 백준_1167_트리의지름_한재경_765ms {
     }
 }
 
-public class Main {
+public class 백준_1167_트리의지름_한재경_765ms {
     static int v;
     static List<Node>[] nodes;
 
