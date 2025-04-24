@@ -1,6 +1,7 @@
 import java.util.*;
 
-class LeetCode_57_InsertInterval {
+// 이분탐색
+class LeetCode_57_InsertInterval_이민선 {
     static class Interval {
         int s;
         int e;
