@@ -1,5 +1,6 @@
 import java.util.*;
 
+//구현
 public class 프로그래머스_붕대감기_레벨2_한재경 {
     public int solution(int[] bandage, int health, int[][] attacks) {
         int t = bandage[0]; // 연속 시전 시간
