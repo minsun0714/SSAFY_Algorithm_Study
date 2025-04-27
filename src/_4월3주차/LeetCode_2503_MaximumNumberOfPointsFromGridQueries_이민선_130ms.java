@@ -1,5 +1,6 @@
 import java.util.*;
 
+// bfs, 누적합
 class LeetCode_2503_MaximumNumberOfPointsFromGridQueries_이민선_130ms {
     static int m;
     static int n;
