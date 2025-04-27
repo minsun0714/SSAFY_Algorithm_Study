@@ -1,5 +1,6 @@
 import java.util.*;
 
+//그래프 && BFS
 class 프로그래머스_도넛과막대그래프_레벨2_한재경 {
     static List<List<Integer>> es; //간선리스트: 양방향(막대그래프 처리 위해)
     static boolean[] visited;
