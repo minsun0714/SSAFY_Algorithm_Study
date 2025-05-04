@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
+// 위상정렬
 public class Main_백준_2252_줄세우기_골드3_500ms {
 	public static void main(String[] args) throws Exception {
         // 입력 처리
