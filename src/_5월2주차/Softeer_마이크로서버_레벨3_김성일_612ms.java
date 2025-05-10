@@ -5,14 +5,15 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-  
+
     static BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer tokens;
     static StringBuilder output = new StringBuilder();
-  
+
     public static void main(String[] args) throws Exception{
         int T = Integer.parseInt(input.readLine());
-        for(int t=0; t<T; t++){
+        for(int t=0; t<T; t++){ 
+
             TreeMap<Integer, Integer> map = new TreeMap<>();
             int n = Integer.parseInt(input.readLine());
             List<Integer> descSort = new ArrayList<>();
@@ -32,23 +33,21 @@ public class Main {
             }
             output.append(count).append("\n");
         } 
-
         System.out.println(output);
     }
 
     private static void insertService(int service, TreeMap<Integer, Integer> map) {
-        int remain = 900-service;
         if(map.isEmpty()){
-            insert(remain, map);
+            insert(service,map);
             return;
         }
-        int last = map.lastKey();
-        int totalRemain = last - service;
-        if(totalRemain>=0){ 
-            insert(totalRemain, map);
-            delete(last, map);
-        } else{ 
-            insert(remain,map);
+        int first = map.firstKey();
+        int total = first + service;
+        if(total<=900){
+            insert(total, map);
+            delete(first, map);
+        } else{
+            insert(service,map);
         }
     }
 
@@ -67,3 +66,4 @@ public class Main {
     }
 
 }
+
