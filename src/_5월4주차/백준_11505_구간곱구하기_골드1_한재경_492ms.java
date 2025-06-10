@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class 백준_11505_구간합구하기_골드1_한재경_492ms {
+public class 백준_11505_구간곱구하기_골드1_한재경_492ms {
     static int n;
     static int m;
     static int k;
