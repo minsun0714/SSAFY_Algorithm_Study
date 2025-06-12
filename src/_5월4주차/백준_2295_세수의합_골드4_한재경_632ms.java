@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 // 이분탐색
-public class 백준_2295_세수의합_골드4_한재경_672ms {
+public class 백준_2295_세수의합_골드4_한재경_632ms {
     static List<Long> ab;
 
     // ab[x] = diff 되는 값 있는지
