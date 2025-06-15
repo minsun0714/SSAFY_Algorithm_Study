@@ -14,5 +14,4 @@ SELECT ID,
         (SELECT
             ID, RANK() OVER(ORDER BY SIZE_OF_COLONY DESC) RNK
          FROM ECOLI_DATA) b
-    GROUP BY ID
     ORDER BY b.ID;
