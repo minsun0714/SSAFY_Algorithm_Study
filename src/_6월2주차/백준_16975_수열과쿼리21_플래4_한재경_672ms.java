@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 // 세그먼트 트리, tree에 본 값 말고 더해야 할 값만 메모
-public class 백준_16975_수열과쿼리21_플레4_한재경_672ms {
+public class 백준_16975_수열과쿼리21_플래4_한재경_672ms {
     static int n;
     static int m;
     static int[] arr;
