@@ -18,7 +18,7 @@ public class 백준_11401_이항계수3_골드1_한재경_892ms {
         while (k > 0) {
             //원래는 sum = (sum * n / k) % mod
             //나눗셈 모듈로이므로 역원 구해서 각각 계산!
-            //(sum * n % mod) * (sum * k역원 % mod)
+            //((sum * n % mod) * newK) % mod
 
             // 1) 분자에 n 곱하고 mod
             sum = (sum * n) % MOD;
