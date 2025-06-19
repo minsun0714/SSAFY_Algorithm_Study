@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 
+// 분할정복
 public class 백준_10830_행렬제곱_골드4_한재경_120ms {
     static int n;
 
