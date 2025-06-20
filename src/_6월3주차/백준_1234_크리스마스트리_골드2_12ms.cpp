@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-
+//DP
 int N, R, G, B;
 long f2[6] = {1, 2, 6, 20, 70, 252}; //2개씩 조합 경우의 수
 long f3[4] = {1, 6, 90, 1680}; //3개씩 조합 경우의 수
