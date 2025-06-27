@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+//우선순위큐
 public class 백준_1202_보석도둑_한재경_골드2_1740ms {
     static class Node implements Comparable<Node> {
         int weight;
@@ -14,9 +15,6 @@ public class 백준_1202_보석도둑_한재경_골드2_1740ms {
         // 무게작은순 정렬 (작은 가방부터 넣기 시작하기 때문)
         public int compareTo(Node o) {
             return this.weight - o.weight;
-        }
-        public String toString() {
-            return weight + "무게의 " + cost + "가치";
         }
     }
     public static void main(String[] args) throws IOException {
