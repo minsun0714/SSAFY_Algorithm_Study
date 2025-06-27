@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
 
+//dfs
 public class 백준_25195_Yesoryes_골드4_한재경_612ms {
     static boolean[] visited;
     static List<List<Integer>> links;
