@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class 백준_25195_Yesoryes_이민선_골드4_464ms {
+public class 백준_25195_Yesoryes_골드4_이민선_464ms {
     static int n, m;
     static class Node {
         int u;
