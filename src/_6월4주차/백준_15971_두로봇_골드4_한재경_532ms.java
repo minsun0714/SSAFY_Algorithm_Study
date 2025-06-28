@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //bfs
-public class 백준_15971_두사람_골드4_한재경_532ms {
+public class 백준_15971_두로봇_골드4_한재경_532ms {
     static class Node {
         int idx;
         int cost;
