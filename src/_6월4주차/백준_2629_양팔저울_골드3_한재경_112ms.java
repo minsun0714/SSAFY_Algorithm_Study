@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //dp
-public class 백준_2629_양팔저울_한재경_골드3_112ms {
+public class 백준_2629_양팔저울_골드3_한재경_112ms {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
