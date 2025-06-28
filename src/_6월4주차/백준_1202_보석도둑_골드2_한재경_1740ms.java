@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 //우선순위큐
-public class 백준_1202_보석도둑_한재경_골드2_1740ms {
+public class 백준_1202_보석도둑_골드2_한재경_1740ms {
     static class Node implements Comparable<Node> {
         int weight;
         int cost;
